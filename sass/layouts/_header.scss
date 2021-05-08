@@ -1,0 +1,128 @@
+.header{
+    border-bottom: 1px solid #ecececec;
+  }
+  .header__container{
+    display: flex;
+  }                     
+  .header__nav{
+    display: flex;
+    align-items: center;
+  } 
+
+  .nav__list .item + .item{
+    margin-left: 50px;
+  }
+  .nav__list .link,
+  .contact__list .link{
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contact__list{
+   
+    margin-left: auto;
+  }
+ 
+  
+  .logo{
+    font-family: var(--logo-fonts);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19; 
+    letter-spacing: 0.03em;
+  
+    color: var(--activ-color);
+    @media screen and (max-width:1199.98px)  {
+      font-size: 24px;
+      line-height: 1.16;
+      
+    }
+  }
+  .logo__header{
+    color: var(--logo-color);
+  }
+  
+  .nav__list{
+    display: flex;
+    margin-left: 93px;
+    font-weight: 500; 
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  
+    color: var(--title-color);
+
+    @media screen and (max-width: 767.98px) {
+      display: none;
+    }
+  }
+  .nav__list  .link{
+    position: relative;
+    transition:  color  var(--animation-effect);
+  }
+  .contact__list{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width: 767.98px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      font-size: 12px;
+      line-height: 1.16;
+  }
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: auto;
+      font-weight: 500;
+      letter-spacing: 0.02em;}  
+  }
+
+  .contact__item:not(:last-child){
+    @media screen and (min-width: 1200px){
+      margin-right: 50px;
+    }
+ }
+  .contact__item{
+    @media screen and (max-width: 1199.98px) {
+        &:nth-child(1) .contact__link{
+            padding-top: 21px;
+            padding-bottom: 5px;
+        }
+        &:nth-child(2) .contact__link{
+            padding-top: 5px;
+            padding-bottom: 21px;
+        }
+    }
+}
+.contact__link{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+@media screen and (min-width: 1200px){
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+transition: color var(--time-hover);
+}
+  .contact__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color var(--animation-effect);
+    
+  }
+  .contact__link:hover .contact__icon,
+  .contact__link:focus .contact__icon{
+    fill: var(--activ-color);
+  }
+  .contact__list .contact__icon{
+    fill: var(--main-color);
+    margin-right: 10px;
+    transition: fill var(--animation-effect);
+  }
+  
+  
